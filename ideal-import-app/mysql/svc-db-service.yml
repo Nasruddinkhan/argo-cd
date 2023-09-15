@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: svc-db-service
   namespace: ideal-import
-Dspec:
+spec:
   ports:
     - name: 3306-tcp
       protocol: TCP
