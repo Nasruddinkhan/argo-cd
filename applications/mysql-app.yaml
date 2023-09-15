@@ -7,14 +7,14 @@ spec:
   destination:
     namespace: ideal-import-app
     server: https://kubernetes.default.svc
-  project: ideal-import-app
+  project: default
   source:
     path: ideal-import-app/mysql
     repoURL: https://github.com/Nasruddinkhan/argo-cd
-    targetRevision: minikube
-  syncPolicy:
-  syncOptions:
-  - CreateNamespace=true
-  automated:
-    selfHeal: true
-    prune: true
+    targetRevision: main
+  syncPolicy: 
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+    - CreateNamespace=true
