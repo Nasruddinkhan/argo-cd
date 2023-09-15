@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autopart-ui-deployment
+spec:
+  selector:
+    matchLabels:
+      app: autopart-ui
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: autopart-ui
+    spec:
+      containers:
+        - name: autoparts-ui
+          image: nasruddinkhan/autoparts-ui
+          ports:
+            - containerPort: 8991
