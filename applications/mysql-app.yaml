@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ideal-import
+  name: ideal-import-mysql
   namespace: argocd 
 spec:
   destination:
