@@ -2,3 +2,4 @@ resources:
 - svc-db-pvc.yml
 - svc-db-service.yml
 - svc-dv.yml
+- svc-namespace.yml

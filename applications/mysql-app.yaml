@@ -10,8 +10,8 @@ spec:
   project: ideal-import-app
   source:
     path: ideal-import-app/mysql
-    repoURL: https://github.com/Nasruddinkhan/argo-cd.git
-    targetRevision: HEAD
+    repoURL: https://github.com/Nasruddinkhan/argo-cd
+    targetRevision: minikube
   syncPolicy:
   syncOptions:
   - CreateNamespace=true
