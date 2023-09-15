@@ -2,7 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: ideal-import-app
-  namespace: nasruddinkhan786-dev
+  namespace: ideal-import
   labels:
     app: ideal-import-app
     group: cnd.com.idealimport
@@ -17,7 +17,7 @@ spec:
       provider: jkube
   template:
     metadata:
-      namespace: nasruddinkhan786-dev
+      namespace: ideal-import
       creationTimestamp: null
       labels:
         app: ideal-import-app
@@ -28,7 +28,7 @@ spec:
       containers:
         - resources: {}
           terminationMessagePath: /dev/termination-log
-          name: nasruddinkhan-ideal-import-app
+          name: ideal-import
           securityContext:
             privileged: false
           ports:

@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: ideal-import-app
-  namespace: nasruddinkhan786-dev
+  namespace: ideal-import
 spec:
   externalTrafficPolicy: Local
   ports:
