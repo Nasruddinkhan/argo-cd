@@ -9,9 +9,12 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: ideal-import-app/ideal-import-ui
-    repoURL: https://github.com/Nasruddinkhan/argo-cd
-    targetRevision: main
+    - repoURL: https://github.com/Nasruddinkhan/argo-cd
+      path: ideal-import-app/ideal-import-ui
+      targetRevision: main
+    - repoURL: https://github.com/Nasruddinkhan/argo-cd
+      path: ideal-import-app/mysql
+      targetRevision: main
   syncPolicy: 
     automated:
       prune: true
