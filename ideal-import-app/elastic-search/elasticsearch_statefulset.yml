@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: es-cluster
-  namespace: kube-logging
+  namespace: kube-logging  # Add the namespace here
 spec:
   serviceName: elasticsearch
   replicas: 3
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.5.0
         resources:
             limits:
               cpu: 1000m
@@ -71,7 +71,7 @@ spec:
         app: elasticsearch
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: standard  # Specify your desired StorageClass here
+      # storageClassName: ""
       resources:
         requests:
           storage: 3Gi
