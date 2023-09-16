@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: es-cluster
+  name: es-cluster-v2  # Use a different name for the new StatefulSet
   namespace: kube-logging
 spec:
   serviceName: elasticsearch
@@ -75,3 +75,5 @@ spec:
       resources:
         requests:
           storage: 3Gi
+  persistentVolumeClaimRetentionPolicy: Delete  # Set your desired policy
+  minReadySeconds: 10  # Set your desired value
