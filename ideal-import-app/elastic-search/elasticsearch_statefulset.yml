@@ -14,6 +14,10 @@ spec:
       labels:
         app: elasticsearch
     spec:
+      volumes:
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: data
       containers:
       - name: elasticsearch
         image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
@@ -30,7 +34,7 @@ spec:
           name: inter-node
           protocol: TCP
         volumeMounts:
-        - name: data
+        - name: data-volume
           mountPath: /usr/share/elasticsearch/data
         env:
           - name: cluster.name
