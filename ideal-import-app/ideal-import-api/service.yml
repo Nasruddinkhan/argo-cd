@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: idealimport-svc
+  namespace: ideal-import
+spec:
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083
+  selector:
+    app: idealimport-svc
+

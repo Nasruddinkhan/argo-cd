@@ -1,3 +1,5 @@
 resources:
   - mysql-app.yaml
   - ideal-import-ui.yaml
+  - ideal-import-api.yaml
+  

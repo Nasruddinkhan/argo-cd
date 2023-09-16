@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: ideal-import-svc
+  namespace: ideal-import
+spec:
+  path: /ideal-svc
+  to:
+    kind: Service
+    name: idealimport-svc
+  port:
+    targetPort: 8083
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: None
+  wildcardPolicy: None

@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ideal-import-api
+  namespace: argocd 
+spec:
+  destination:
+    namespace: ideal-import
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ideal-import-app/ideal-import-api
+    repoURL: https://github.com/Nasruddinkhan/argo-cd
+    targetRevision: main
