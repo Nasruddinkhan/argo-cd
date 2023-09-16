@@ -67,11 +67,9 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: data
-      labels:
-        app: elasticsearch
     spec:
-      accessModes: [ "ReadWriteOnce" ]
-      storageClassName: do-block-storage
+      accessModes:
+      - ReadWriteOnce
       resources:
         requests:
           storage: 3Gi
