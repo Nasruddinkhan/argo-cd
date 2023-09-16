@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: es-cluster-v2  # Use a different name for the new StatefulSet
+  name: es-cluster  # Use a different name for the new StatefulSet
   namespace: kube-logging
 spec:
   serviceName: elasticsearch
