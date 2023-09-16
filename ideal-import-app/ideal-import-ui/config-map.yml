@@ -5,4 +5,4 @@ metadata:
   namespace: ideal-import
 data:
   MYSQL_HOST: >-
-    jdbc:mysql://svc-db-service:3306/ideal_import??useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    jdbc:mysql://svc-db-service:3306/ideal_import?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
