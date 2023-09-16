@@ -12,9 +12,3 @@ spec:
     path: ideal-import-app/mysql
     repoURL: https://github.com/Nasruddinkhan/argo-cd
     targetRevision: main
-  syncPolicy: 
-    automated:
-      prune: true
-      selfHeal: false
-    syncOptions:
-    - CreateNamespace=true

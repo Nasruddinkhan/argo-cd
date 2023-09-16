@@ -9,14 +9,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    - repoURL: https://github.com/Nasruddinkhan/argo-cd
-      path: ideal-import-app/ideal-import-ui
-      targetRevision: main
-  syncPolicy: 
-    automated:
-      prune: true
-      selfHeal: false
-    syncOptions:
-    - CreateNamespace=true
-
-    
+    path: ideal-import-app/ideal-import-ui
+    repoURL: https://github.com/Nasruddinkhan/argo-cd
+    targetRevision: main
