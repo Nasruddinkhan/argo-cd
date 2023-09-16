@@ -1,0 +1,4 @@
+resources:
+  - elasticsearch_statefulset.yml
+  - service.yml
+  - namespace.yml

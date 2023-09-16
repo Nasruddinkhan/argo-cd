@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: elastic-search
+  namespace: argocd 
+spec:
+  destination:
+    namespace: kube-logging
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: ideal-import-app/elastic-search
+    repoURL: https://github.com/Nasruddinkhan/argo-cd
+    targetRevision: main
