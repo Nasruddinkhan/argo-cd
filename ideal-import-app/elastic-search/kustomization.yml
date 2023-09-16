@@ -2,3 +2,4 @@ resources:
   - elasticsearch_statefulset.yml
   - service.yml
   - namespace.yml
+  - pvc.yml
